@@ -73,6 +73,8 @@ namespace BookSynopsisTemplate
         	this.characterTextBox = new System.Windows.Forms.TextBox();
         	this.bookIdTextBox = new System.Windows.Forms.TextBox();
         	this.bookTitleTextBox = new System.Windows.Forms.TextBox();
+        	this.bookOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
+        	this.imageOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
         	this.mainMenuStrip.SuspendLayout();
         	this.mainStatusStrip.SuspendLayout();
         	this.mainTableLayoutPanel.SuspendLayout();
@@ -109,7 +111,7 @@ namespace BookSynopsisTemplate
         	this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
         	this.newToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
         	this.newToolStripMenuItem.Text = "&New";
-        	this.newToolStripMenuItem.Click += new System.EventHandler(this.NewToolStripMenuItemClick);
+        	this.newToolStripMenuItem.Click += new System.EventHandler(this.OnNewToolStripMenuItemClick);
         	// 
         	// toolStripSeparator
         	// 
@@ -121,7 +123,7 @@ namespace BookSynopsisTemplate
         	this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
         	this.exitToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
         	this.exitToolStripMenuItem.Text = "E&xit";
-        	this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItemClick);
+        	this.exitToolStripMenuItem.Click += new System.EventHandler(this.OnExitToolStripMenuItemClick);
         	// 
         	// optionsToolStripMenuItem
         	// 
@@ -132,7 +134,7 @@ namespace BookSynopsisTemplate
         	this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
         	this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
         	this.optionsToolStripMenuItem.Text = "&Options";
-        	this.optionsToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.OptionsToolStripMenuItemDropDownItemClicked);
+        	this.optionsToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.OnOptionsToolStripMenuItemDropDownItemClicked);
         	// 
         	// copyOnAddToolStripMenuItem
         	// 
@@ -175,7 +177,7 @@ namespace BookSynopsisTemplate
         	this.headquartersPatreoncomToolStripMenuItem.Name = "headquartersPatreoncomToolStripMenuItem";
         	this.headquartersPatreoncomToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
         	this.headquartersPatreoncomToolStripMenuItem.Text = "Headquarters @ Patreon.com";
-        	this.headquartersPatreoncomToolStripMenuItem.Click += new System.EventHandler(this.HeadquartersPatreoncomToolStripMenuItemClick);
+        	this.headquartersPatreoncomToolStripMenuItem.Click += new System.EventHandler(this.OnHeadquartersPatreoncomToolStripMenuItemClick);
         	// 
         	// sourceCodeGithubcomToolStripMenuItem
         	// 
@@ -183,7 +185,7 @@ namespace BookSynopsisTemplate
         	this.sourceCodeGithubcomToolStripMenuItem.Name = "sourceCodeGithubcomToolStripMenuItem";
         	this.sourceCodeGithubcomToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
         	this.sourceCodeGithubcomToolStripMenuItem.Text = "Source code @ Github.com";
-        	this.sourceCodeGithubcomToolStripMenuItem.Click += new System.EventHandler(this.SourceCodeGithubcomToolStripMenuItemClick);
+        	this.sourceCodeGithubcomToolStripMenuItem.Click += new System.EventHandler(this.OnSourceCodeGithubcomToolStripMenuItemClick);
         	// 
         	// toolStripSeparator1
         	// 
@@ -196,7 +198,7 @@ namespace BookSynopsisTemplate
         	this.originalThreadDonationCodercomToolStripMenuItem.Name = "originalThreadDonationCodercomToolStripMenuItem";
         	this.originalThreadDonationCodercomToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
         	this.originalThreadDonationCodercomToolStripMenuItem.Text = "&Original thread @ DonationCoder.com";
-        	this.originalThreadDonationCodercomToolStripMenuItem.Click += new System.EventHandler(this.OriginalThreadDonationCodercomToolStripMenuItemClick);
+        	this.originalThreadDonationCodercomToolStripMenuItem.Click += new System.EventHandler(this.OnOriginalThreadDonationCodercomToolStripMenuItemClick);
         	// 
         	// toolStripSeparator5
         	// 
@@ -208,7 +210,7 @@ namespace BookSynopsisTemplate
         	this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
         	this.aboutToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
         	this.aboutToolStripMenuItem.Text = "&About...";
-        	this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItemClick);
+        	this.aboutToolStripMenuItem.Click += new System.EventHandler(this.OnAboutToolStripMenuItemClick);
         	// 
         	// mainStatusStrip
         	// 
@@ -367,7 +369,7 @@ namespace BookSynopsisTemplate
         	this.addButton.TabIndex = 6;
         	this.addButton.Text = "&Add entry";
         	this.addButton.UseVisualStyleBackColor = true;
-        	this.addButton.Click += new System.EventHandler(this.AddButtonClick);
+        	this.addButton.Click += new System.EventHandler(this.OnAddButtonClick);
         	// 
         	// tableLayoutPanel1
         	// 
@@ -395,7 +397,7 @@ namespace BookSynopsisTemplate
         	this.removeEntryComboBox.Size = new System.Drawing.Size(192, 21);
         	this.removeEntryComboBox.TabIndex = 7;
         	this.removeEntryComboBox.Text = "Select entry to delete...";
-        	this.removeEntryComboBox.SelectedIndexChanged += new System.EventHandler(this.RemoveEntryComboBoxSelectedIndexChanged);
+        	this.removeEntryComboBox.SelectedIndexChanged += new System.EventHandler(this.OnRemoveEntryComboBoxSelectedIndexChanged);
         	// 
         	// viewHtmlButton
         	// 
@@ -407,7 +409,7 @@ namespace BookSynopsisTemplate
         	this.viewHtmlButton.TabIndex = 8;
         	this.viewHtmlButton.Text = "View &HTML";
         	this.viewHtmlButton.UseVisualStyleBackColor = true;
-        	this.viewHtmlButton.Click += new System.EventHandler(this.ViewHtmlButtonClick);
+        	this.viewHtmlButton.Click += new System.EventHandler(this.OnViewHtmlButtonClick);
         	// 
         	// browseForFileButton
         	// 
@@ -419,7 +421,7 @@ namespace BookSynopsisTemplate
         	this.browseForFileButton.TabIndex = 3;
         	this.browseForFileButton.Text = "Browse for &file";
         	this.browseForFileButton.UseVisualStyleBackColor = true;
-        	this.browseForFileButton.Click += new System.EventHandler(this.BrowForFileButtonClick);
+        	this.browseForFileButton.Click += new System.EventHandler(this.OnBrowseForFileButtonClick);
         	// 
         	// browseForImageButton
         	// 
@@ -431,7 +433,7 @@ namespace BookSynopsisTemplate
         	this.browseForImageButton.TabIndex = 4;
         	this.browseForImageButton.Text = "Browse for &image";
         	this.browseForImageButton.UseVisualStyleBackColor = true;
-        	this.browseForImageButton.Click += new System.EventHandler(this.BrowseForImageButtonClick);
+        	this.browseForImageButton.Click += new System.EventHandler(this.OnBrowseForImageButtonClick);
         	// 
         	// characterTextBox
         	// 
@@ -457,6 +459,19 @@ namespace BookSynopsisTemplate
         	this.bookTitleTextBox.Size = new System.Drawing.Size(185, 20);
         	this.bookTitleTextBox.TabIndex = 2;
         	// 
+        	// bookOpenFileDialog
+        	// 
+        	this.bookOpenFileDialog.Filter = "EPUB Files|*.epub|MOBI Files|*.mobi|AZW Files|*.azw;*.azw3|PDF Files|*.pdf|ODF Fi" +
+        	"les|.odf|LIT Files|*.lit|Text Files|*.txt|All files*(*.*)|*.*";
+        	this.bookOpenFileDialog.Multiselect = true;
+        	this.bookOpenFileDialog.Title = "Open book file";
+        	// 
+        	// imageOpenFileDialog
+        	// 
+        	this.imageOpenFileDialog.Filter = "Image Files|*.bmp;*.gif;*.ico;*.jpg;*.jpeg;*.png;*.tif;*.tiff|Bitmap Files|*.bmp";
+        	this.imageOpenFileDialog.Multiselect = true;
+        	this.imageOpenFileDialog.Title = "Open book image";
+        	// 
         	// MainForm
         	// 
         	this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -481,6 +496,8 @@ namespace BookSynopsisTemplate
         	this.ResumeLayout(false);
         	this.PerformLayout();
         }
+        private System.Windows.Forms.OpenFileDialog imageOpenFileDialog;
+        private System.Windows.Forms.OpenFileDialog bookOpenFileDialog;
         private System.Windows.Forms.ToolStripMenuItem askOnDeleteToolStripMenuItem;
         private System.Windows.Forms.Button viewHtmlButton;
         private System.Windows.Forms.ComboBox removeEntryComboBox;
