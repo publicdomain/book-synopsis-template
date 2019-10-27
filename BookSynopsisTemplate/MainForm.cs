@@ -9,6 +9,8 @@ namespace BookSynopsisTemplate
     using System;
     using System.Collections.Generic;
     using System.Drawing;
+    using System.IO;
+    using System.Text.RegularExpressions;
     using System.Windows.Forms;
 
     /// <summary>
@@ -17,12 +19,54 @@ namespace BookSynopsisTemplate
     public partial class MainForm : Form
     {
         /// <summary>
+        /// The template string.
+        /// </summary>
+        private string templateString;
+
+        /// <summary>
+        /// The entry html.
+        /// </summary>
+        private string entryHtml;
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="T:BookSynopsisTemplate.MainForm"/> class.
         /// </summary>
         public MainForm()
         {
             // The InitializeComponent() call is required for Windows Forms designer support.
             this.InitializeComponent();
+        }
+
+        /// <summary>
+        /// Handles the main form load event.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void OnMainFormLoad(object sender, EventArgs e)
+        {
+            // Require template file
+            if (!File.Exists("template.txt"))
+            {
+                // Advise user
+                MessageBox.Show($"Template file missing!{Environment.NewLine}{Environment.NewLine}Please add \"template.txt\" to app folder.", "Template required", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                // Exit program
+                this.Close();
+            }
+            else
+            {
+                // Set initial template string
+                this.templateString = File.ReadAllText("template.txt");
+
+                // Set regex
+                var regex = new Regex(@"<!-- entry-begin -->(.+)<!-- entry-end -->", RegexOptions.Singleline);
+
+                // Grab entry HTML
+                this.entryHtml = regex.Match(this.templateString).Groups[1].Value;
+
+                // Set processed template string
+                this.templateString = regex.Replace(this.templateString, "[ENTRIES-HTML]");
+            }
         }
 
         /// <summary>
