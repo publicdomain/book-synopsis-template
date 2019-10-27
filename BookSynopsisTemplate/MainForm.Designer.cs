@@ -468,7 +468,7 @@ namespace BookSynopsisTemplate
             // 
             // imageOpenFileDialog
             // 
-            this.imageOpenFileDialog.Filter = "Image Files|*.bmp;*.gif;*.ico;*.jpg;*.jpeg;*.png;*.tif;*.tiff|Bitmap Files|*.bmp";
+            this.imageOpenFileDialog.Filter = "Image Files|*.bmp;*.gif;*.ico;*.jpg;*.jpeg;*.png;*.tif;*.tiff|Bitmap Files|*.bmp|GIF Files|*.gif|ICON files|*.ico|JPEG Files|*.jpg;*.jpeg|PNG Files|*.png|TIF Files|*.tif;*.tiff|All files*(*.*)|*.*";
             this.imageOpenFileDialog.Multiselect = true;
             this.imageOpenFileDialog.Title = "Open book image";
             // 
