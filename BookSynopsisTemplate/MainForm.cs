@@ -106,7 +106,8 @@ namespace BookSynopsisTemplate
         /// <param name="e">Event arguments.</param>
         private void OnBrowseForFileButtonClick(object sender, EventArgs e)
         {
-            // TODO Add code.
+            // Browse for book file
+            this.bookOpenFileDialog.ShowDialog();
         }
 
         /// <summary>
