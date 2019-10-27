@@ -60,9 +60,9 @@ namespace BookSynopsisTemplate
         public string Synopsys { get; set; }
 
         /// <summary>
-        /// Gets or sets the div html.
+        /// Gets or sets the html.
         /// </summary>
-        /// <value>The div html.</value>
-        public string DivHtml { get; set; }
+        /// <value>The html.</value>
+        public string HTML { get; set; }
     }
 }
