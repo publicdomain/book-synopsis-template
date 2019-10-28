@@ -299,7 +299,11 @@ namespace BookSynopsisTemplate
         /// <param name="e">Event arguments.</param>
         private void OnOptionsToolStripMenuItemDropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            // TODO Add code.
+            // Set item
+            var clickedToolStripMenuItem = (ToolStripMenuItem)e.ClickedItem;
+
+            // Toggle checked state
+            clickedToolStripMenuItem.Checked = !clickedToolStripMenuItem.Checked;
         }
 
         /// <summary>
