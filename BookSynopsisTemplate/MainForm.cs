@@ -273,10 +273,19 @@ namespace BookSynopsisTemplate
             }
 
             // Reset text
-            this.removeEntryComboBox.Text = "Select entry to delete...";
+            this.ResetRemoveEntryComboBoxText();
 
             // Reflect new entry count
             this.UpdateStatus();
+        }
+
+        /// <summary>
+        /// Resets the remove entry combo box text.
+        /// </summary>
+        private void ResetRemoveEntryComboBoxText()
+        {
+            // Reset text
+            this.removeEntryComboBox.Text = "Select entry to delete...";
         }
 
         /// <summary>
@@ -308,7 +317,22 @@ namespace BookSynopsisTemplate
         /// <param name="e">Event arguments.</param>
         private void OnNewToolStripMenuItemClick(object sender, EventArgs e)
         {
-            // TODO Add code.
+            // Reset character text box
+            this.characterTextBox.Clear();
+            this.characterTextBox.Enabled = true;
+
+            // Reset other fields
+            this.ClearFields();
+
+            // Reset entry info dictionary
+            this.entryInfoDictionary.Clear();
+
+            // Reset remove entry combo box
+            this.removeEntryComboBox.Items.Clear();
+            this.ResetRemoveEntryComboBoxText();
+
+            // Display initial status
+            this.UpdateStatus();
         }
 
         /// <summary>
