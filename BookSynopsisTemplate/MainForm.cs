@@ -365,7 +365,8 @@ namespace BookSynopsisTemplate
         /// <param name="e">Event arguments.</param>
         private void OnOriginalThreadDonationCodercomToolStripMenuItemClick(object sender, EventArgs e)
         {
-            // TODO Add code.
+            // Open original thread @ DonationCoder
+            Process.Start("https://www.donationcoder.com/forum/index.php?topic=48893.0");
         }
 
         /// <summary>
