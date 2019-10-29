@@ -317,7 +317,8 @@ namespace BookSynopsisTemplate
         /// <param name="e">Event arguments.</param>
         private void OnExitToolStripMenuItemClick(object sender, EventArgs e)
         {
-            // TODO Add code.
+            // Exit program
+            this.Close();
         }
 
         /// <summary>
