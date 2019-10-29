@@ -8,6 +8,7 @@ namespace BookSynopsisTemplate
     // Directives
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics;
     using System.Drawing;
     using System.IO;
     using System.Text.RegularExpressions;
@@ -342,7 +343,8 @@ namespace BookSynopsisTemplate
         /// <param name="e">Event arguments.</param>
         private void OnHeadquartersPatreoncomToolStripMenuItemClick(object sender, EventArgs e)
         {
-            // TODO Add code.
+            // Open Patreon headquarters
+            Process.Start("https://www.patreon.com/publicdomain");
         }
 
         /// <summary>
