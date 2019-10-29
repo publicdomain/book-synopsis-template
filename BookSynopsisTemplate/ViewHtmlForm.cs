@@ -71,7 +71,8 @@ namespace BookSynopsisTemplate
         /// <param name="e">Event arguments.</param>
         private void OnCopyToolStripMenuItemClick(object sender, EventArgs e)
         {
-            // TODO Add code.
+            // Copy text to clipboard
+            Clipboard.SetText(this.htmlTextBox.Text);
         }
 
         /// <summary>
