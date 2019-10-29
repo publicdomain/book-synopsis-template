@@ -37,6 +37,7 @@ namespace BookSynopsisTemplate
 
             // Set HTML into text box
             this.htmlTextBox.Text = htmlString;
+            this.htmlTextBox.SelectionStart = 0;
         }
 
         /// <summary>
