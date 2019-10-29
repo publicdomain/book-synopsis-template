@@ -29,6 +29,15 @@ namespace PublicDomain
             // The InitializeComponent() call is required for Windows Forms designer support.
             this.InitializeComponent();
 
+            // Hidden cancel button for closing when hitting escape
+            var cancelButton = new Button
+            {
+                Size = new Size(0, 0),
+                TabStop = false
+            };
+            this.Controls.Add(cancelButton);
+            this.CancelButton = cancelButton;
+
             // Set form title
             this.Text = formTitle;
 

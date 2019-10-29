@@ -11,8 +11,10 @@ namespace BookSynopsisTemplate
     using System.Diagnostics;
     using System.Drawing;
     using System.IO;
+    using System.Reflection;
     using System.Text.RegularExpressions;
     using System.Windows.Forms;
+    using PublicDomain;
 
     /// <summary>
     /// Main form class.
@@ -35,12 +37,35 @@ namespace BookSynopsisTemplate
         private Dictionary<string, EntryInfo> entryInfoDictionary = new Dictionary<string, EntryInfo>();
 
         /// <summary>
+        /// The assembly version.
+        /// </summary>
+        private Version assemblyVersion = Assembly.GetExecutingAssembly().GetName().Version;
+
+        /// <summary>
+        /// The semantic version.
+        /// </summary>
+        private string semanticVersion = string.Empty;
+
+        /// <summary>
+        /// The associated icon.
+        /// </summary>
+        private Icon associatedIcon = null;
+
+        /// <summary>
+        /// The friendly name of the program.
+        /// </summary>
+        private string friendlyName = "Book Synopsis Template";
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="T:BookSynopsisTemplate.MainForm"/> class.
         /// </summary>
         public MainForm()
         {
             // The InitializeComponent() call is required for Windows Forms designer support.
             this.InitializeComponent();
+
+            // Set semantic version
+            this.semanticVersion = this.assemblyVersion.Major + "." + this.assemblyVersion.Minor + "." + this.assemblyVersion.Build;
         }
 
         /// <summary>
@@ -400,7 +425,49 @@ namespace BookSynopsisTemplate
         /// <param name="e">Event arguments.</param>
         private void OnAboutToolStripMenuItemClick(object sender, EventArgs e)
         {
-            // TODO Add code.
+            // Set license text
+            var licenseText = $"CC0 1.0 Universal (CC0 1.0) - Public Domain Dedication{Environment.NewLine}" +
+                $"https://creativecommons.org/publicdomain/zero/1.0/legalcode{Environment.NewLine}{Environment.NewLine}" +
+                $"Libraries and icons have separate licenses.{Environment.NewLine}{Environment.NewLine}" +
+                $"Book read icon by IO-Images - Pixabay License{Environment.NewLine}" +
+                $"https://pixabay.com/vectors/book-read-books-learn-text-icon-1157658/{Environment.NewLine}{Environment.NewLine}" +
+                $"Patreon icon used according to published brand guidelines{Environment.NewLine}" +
+                $"https://www.patreon.com/brand{Environment.NewLine}{Environment.NewLine}" +
+                $"GitHub mark icon used according to published logos and usage guidelines{Environment.NewLine}" +
+                $"https://github.com/logos{Environment.NewLine}{Environment.NewLine}" +
+                $"DonationCoder icon used with permission{Environment.NewLine}" +
+                $"https://www.donationcoder.com/forum/index.php?topic=48718{Environment.NewLine}{Environment.NewLine}" +
+                $"PublicDomain icon is based on the following source images:{Environment.NewLine}{Environment.NewLine}" +
+                $"Bitcoin by GDJ - Pixabay License{Environment.NewLine}" +
+                $"https://pixabay.com/vectors/bitcoin-digital-currency-4130319/{Environment.NewLine}{Environment.NewLine}" +
+                $"Letter P by ArtsyBee - Pixabay License{Environment.NewLine}" +
+                $"https://pixabay.com/illustrations/p-glamour-gold-lights-2790632/{Environment.NewLine}{Environment.NewLine}" +
+                $"Letter D by ArtsyBee - Pixabay License{Environment.NewLine}" +
+                $"https://pixabay.com/illustrations/d-glamour-gold-lights-2790573/{Environment.NewLine}{Environment.NewLine}";
+
+            // Set about form
+            var aboutForm = new AboutForm(
+                $"About {this.friendlyName}",
+                $"{this.friendlyName} {this.semanticVersion}",
+                $"Made for: fredemeister{Environment.NewLine}DonationCoder.com{Environment.NewLine}Week #44 @ October 2019",
+                licenseText,
+                this.Icon.ToBitmap());
+
+            // Check for an associated icon
+            if (this.associatedIcon == null)
+            {
+                // Set associated icon from exe file, once
+                this.associatedIcon = Icon.ExtractAssociatedIcon(Assembly.GetExecutingAssembly().Location);
+            }
+
+            // Set about form icon
+            aboutForm.Icon = this.associatedIcon;
+
+            // Match topmost
+            aboutForm.TopMost = this.TopMost;
+
+            // Show about form
+            aboutForm.ShowDialog();
         }
     }
 }
