@@ -82,7 +82,8 @@ namespace BookSynopsisTemplate
         /// <param name="e">Event arguments.</param>
         private void OnSelectAllToolStripMenuItemClick(object sender, EventArgs e)
         {
-            // TODO Add code.
+            // Select all on text box
+            this.htmlTextBox.SelectAll();
         }
     }
 }
