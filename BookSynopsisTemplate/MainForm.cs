@@ -241,8 +241,8 @@ namespace BookSynopsisTemplate
             // Set new view HTML form
             var viewHtmlForm = new ViewHtmlForm(this.GetHtml());
 
-            // Show it
-            viewHtmlForm.Show();
+            // Show it as dialog
+            viewHtmlForm.ShowDialog();
         }
 
         /// <summary>

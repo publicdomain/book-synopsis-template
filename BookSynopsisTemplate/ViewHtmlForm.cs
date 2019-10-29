@@ -27,5 +27,45 @@ namespace BookSynopsisTemplate
             // Set HTML into text box
             this.htmlTextBox.Text = htmlString;
         }
+
+        /// <summary>
+        /// Handles the save tool strip menu item click event.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void OnSaveToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            // TODO Add code.
+        }
+
+        /// <summary>
+        /// Handles the exit tool strip menu item click event.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void OnExitToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            // TODO Add code.
+        }
+
+        /// <summary>
+        /// Handles the copy tool strip menu item click event.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void OnCopyToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            // TODO Add code.
+        }
+
+        /// <summary>
+        /// Handles the select all tool strip menu item click event.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void OnSelectAllToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            // TODO Add code.
+        }
     }
 }
