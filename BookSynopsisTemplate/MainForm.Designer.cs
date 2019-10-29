@@ -36,478 +36,477 @@ namespace BookSynopsisTemplate
         /// </summary>
         private void InitializeComponent()
         {
-        	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-        	this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
-        	this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        	this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        	this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-        	this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        	this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        	this.copyOnAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        	this.clearOnAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        	this.relativePathsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        	this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        	this.headquartersPatreoncomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        	this.sourceCodeGithubcomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        	this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-        	this.originalThreadDonationCodercomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        	this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-        	this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        	this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
-        	this.mainToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-        	this.mainTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-        	this.characterLabel = new System.Windows.Forms.Label();
-        	this.bookIdLabel = new System.Windows.Forms.Label();
-        	this.bookTitleLabel = new System.Windows.Forms.Label();
-        	this.filePathLabel = new System.Windows.Forms.Label();
-        	this.imagePathLabel = new System.Windows.Forms.Label();
-        	this.htmlTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-        	this.synopsisTextBox = new System.Windows.Forms.TextBox();
-        	this.synopsisLabel = new System.Windows.Forms.Label();
-        	this.addButton = new System.Windows.Forms.Button();
-        	this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-        	this.removeEntryComboBox = new System.Windows.Forms.ComboBox();
-        	this.viewHtmlButton = new System.Windows.Forms.Button();
-        	this.browseForFileButton = new System.Windows.Forms.Button();
-        	this.browseForImageButton = new System.Windows.Forms.Button();
-        	this.characterTextBox = new System.Windows.Forms.TextBox();
-        	this.bookIdTextBox = new System.Windows.Forms.TextBox();
-        	this.bookTitleTextBox = new System.Windows.Forms.TextBox();
-        	this.bookOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
-        	this.imageOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
-        	this.copyOnDeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        	this.mainMenuStrip.SuspendLayout();
-        	this.mainStatusStrip.SuspendLayout();
-        	this.mainTableLayoutPanel.SuspendLayout();
-        	this.htmlTableLayoutPanel.SuspendLayout();
-        	this.tableLayoutPanel1.SuspendLayout();
-        	this.SuspendLayout();
-        	// 
-        	// mainMenuStrip
-        	// 
-        	this.mainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-        	        	        	this.fileToolStripMenuItem,
-        	        	        	this.optionsToolStripMenuItem,
-        	        	        	this.helpToolStripMenuItem});
-        	this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
-        	this.mainMenuStrip.Name = "mainMenuStrip";
-        	this.mainMenuStrip.Size = new System.Drawing.Size(284, 24);
-        	this.mainMenuStrip.TabIndex = 5;
-        	// 
-        	// fileToolStripMenuItem
-        	// 
-        	this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-        	        	        	this.newToolStripMenuItem,
-        	        	        	this.toolStripSeparator,
-        	        	        	this.exitToolStripMenuItem});
-        	this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-        	this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-        	this.fileToolStripMenuItem.Text = "&File";
-        	// 
-        	// newToolStripMenuItem
-        	// 
-        	this.newToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripMenuItem.Image")));
-        	this.newToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-        	this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-        	this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-        	this.newToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
-        	this.newToolStripMenuItem.Text = "&New";
-        	this.newToolStripMenuItem.Click += new System.EventHandler(this.OnNewToolStripMenuItemClick);
-        	// 
-        	// toolStripSeparator
-        	// 
-        	this.toolStripSeparator.Name = "toolStripSeparator";
-        	this.toolStripSeparator.Size = new System.Drawing.Size(138, 6);
-        	// 
-        	// exitToolStripMenuItem
-        	// 
-        	this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-        	this.exitToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
-        	this.exitToolStripMenuItem.Text = "E&xit";
-        	this.exitToolStripMenuItem.Click += new System.EventHandler(this.OnExitToolStripMenuItemClick);
-        	// 
-        	// optionsToolStripMenuItem
-        	// 
-        	this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-        	        	        	this.copyOnAddToolStripMenuItem,
-        	        	        	this.clearOnAddToolStripMenuItem,
-        	        	        	this.relativePathsToolStripMenuItem,
-        	        	        	this.copyOnDeleteToolStripMenuItem});
-        	this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-        	this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-        	this.optionsToolStripMenuItem.Text = "&Options";
-        	this.optionsToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.OnOptionsToolStripMenuItemDropDownItemClicked);
-        	// 
-        	// copyOnAddToolStripMenuItem
-        	// 
-        	this.copyOnAddToolStripMenuItem.Checked = true;
-        	this.copyOnAddToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-        	this.copyOnAddToolStripMenuItem.Name = "copyOnAddToolStripMenuItem";
-        	this.copyOnAddToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-        	this.copyOnAddToolStripMenuItem.Text = "&Copy on add";
-        	// 
-        	// clearOnAddToolStripMenuItem
-        	// 
-        	this.clearOnAddToolStripMenuItem.Checked = true;
-        	this.clearOnAddToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-        	this.clearOnAddToolStripMenuItem.Name = "clearOnAddToolStripMenuItem";
-        	this.clearOnAddToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-        	this.clearOnAddToolStripMenuItem.Text = "C&lear on add";
-        	// 
-        	// relativePathsToolStripMenuItem
-        	// 
-        	this.relativePathsToolStripMenuItem.Checked = true;
-        	this.relativePathsToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-        	this.relativePathsToolStripMenuItem.Name = "relativePathsToolStripMenuItem";
-        	this.relativePathsToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-        	this.relativePathsToolStripMenuItem.Text = "&Relative paths";
-        	// 
-        	// helpToolStripMenuItem
-        	// 
-        	this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-        	        	        	this.headquartersPatreoncomToolStripMenuItem,
-        	        	        	this.sourceCodeGithubcomToolStripMenuItem,
-        	        	        	this.toolStripSeparator1,
-        	        	        	this.originalThreadDonationCodercomToolStripMenuItem,
-        	        	        	this.toolStripSeparator5,
-        	        	        	this.aboutToolStripMenuItem});
-        	this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-        	this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-        	this.helpToolStripMenuItem.Text = "&Help";
-        	// 
-        	// headquartersPatreoncomToolStripMenuItem
-        	// 
-        	this.headquartersPatreoncomToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("headquartersPatreoncomToolStripMenuItem.Image")));
-        	this.headquartersPatreoncomToolStripMenuItem.Name = "headquartersPatreoncomToolStripMenuItem";
-        	this.headquartersPatreoncomToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
-        	this.headquartersPatreoncomToolStripMenuItem.Text = "Headquarters @ Patreon.com";
-        	this.headquartersPatreoncomToolStripMenuItem.Click += new System.EventHandler(this.OnHeadquartersPatreoncomToolStripMenuItemClick);
-        	// 
-        	// sourceCodeGithubcomToolStripMenuItem
-        	// 
-        	this.sourceCodeGithubcomToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sourceCodeGithubcomToolStripMenuItem.Image")));
-        	this.sourceCodeGithubcomToolStripMenuItem.Name = "sourceCodeGithubcomToolStripMenuItem";
-        	this.sourceCodeGithubcomToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
-        	this.sourceCodeGithubcomToolStripMenuItem.Text = "Source code @ Github.com";
-        	this.sourceCodeGithubcomToolStripMenuItem.Click += new System.EventHandler(this.OnSourceCodeGithubcomToolStripMenuItemClick);
-        	// 
-        	// toolStripSeparator1
-        	// 
-        	this.toolStripSeparator1.Name = "toolStripSeparator1";
-        	this.toolStripSeparator1.Size = new System.Drawing.Size(275, 6);
-        	// 
-        	// originalThreadDonationCodercomToolStripMenuItem
-        	// 
-        	this.originalThreadDonationCodercomToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("originalThreadDonationCodercomToolStripMenuItem.Image")));
-        	this.originalThreadDonationCodercomToolStripMenuItem.Name = "originalThreadDonationCodercomToolStripMenuItem";
-        	this.originalThreadDonationCodercomToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
-        	this.originalThreadDonationCodercomToolStripMenuItem.Text = "&Original thread @ DonationCoder.com";
-        	this.originalThreadDonationCodercomToolStripMenuItem.Click += new System.EventHandler(this.OnOriginalThreadDonationCodercomToolStripMenuItemClick);
-        	// 
-        	// toolStripSeparator5
-        	// 
-        	this.toolStripSeparator5.Name = "toolStripSeparator5";
-        	this.toolStripSeparator5.Size = new System.Drawing.Size(275, 6);
-        	// 
-        	// aboutToolStripMenuItem
-        	// 
-        	this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-        	this.aboutToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
-        	this.aboutToolStripMenuItem.Text = "&About...";
-        	this.aboutToolStripMenuItem.Click += new System.EventHandler(this.OnAboutToolStripMenuItemClick);
-        	// 
-        	// mainStatusStrip
-        	// 
-        	this.mainStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-        	        	        	this.mainToolStripStatusLabel});
-        	this.mainStatusStrip.Location = new System.Drawing.Point(0, 314);
-        	this.mainStatusStrip.Name = "mainStatusStrip";
-        	this.mainStatusStrip.Size = new System.Drawing.Size(284, 22);
-        	this.mainStatusStrip.TabIndex = 6;
-        	// 
-        	// mainToolStripStatusLabel
-        	// 
-        	this.mainToolStripStatusLabel.Name = "mainToolStripStatusLabel";
-        	this.mainToolStripStatusLabel.Size = new System.Drawing.Size(190, 17);
-        	this.mainToolStripStatusLabel.Text = "Populate fields then add new entry";
-        	// 
-        	// mainTableLayoutPanel
-        	// 
-        	this.mainTableLayoutPanel.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
-        	this.mainTableLayoutPanel.ColumnCount = 2;
-        	this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.74648F));
-        	this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.25352F));
-        	this.mainTableLayoutPanel.Controls.Add(this.characterLabel, 0, 0);
-        	this.mainTableLayoutPanel.Controls.Add(this.bookIdLabel, 0, 1);
-        	this.mainTableLayoutPanel.Controls.Add(this.bookTitleLabel, 0, 2);
-        	this.mainTableLayoutPanel.Controls.Add(this.filePathLabel, 0, 3);
-        	this.mainTableLayoutPanel.Controls.Add(this.imagePathLabel, 0, 4);
-        	this.mainTableLayoutPanel.Controls.Add(this.htmlTableLayoutPanel, 0, 5);
-        	this.mainTableLayoutPanel.Controls.Add(this.browseForFileButton, 1, 3);
-        	this.mainTableLayoutPanel.Controls.Add(this.browseForImageButton, 1, 4);
-        	this.mainTableLayoutPanel.Controls.Add(this.characterTextBox, 1, 0);
-        	this.mainTableLayoutPanel.Controls.Add(this.bookIdTextBox, 1, 1);
-        	this.mainTableLayoutPanel.Controls.Add(this.bookTitleTextBox, 1, 2);
-        	this.mainTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-        	this.mainTableLayoutPanel.Location = new System.Drawing.Point(0, 24);
-        	this.mainTableLayoutPanel.Name = "mainTableLayoutPanel";
-        	this.mainTableLayoutPanel.RowCount = 6;
-        	this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-        	this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-        	this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-        	this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-        	this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-        	this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-        	this.mainTableLayoutPanel.Size = new System.Drawing.Size(284, 290);
-        	this.mainTableLayoutPanel.TabIndex = 7;
-        	// 
-        	// characterLabel
-        	// 
-        	this.characterLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-        	this.characterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        	this.characterLabel.Location = new System.Drawing.Point(3, 0);
-        	this.characterLabel.Name = "characterLabel";
-        	this.characterLabel.Size = new System.Drawing.Size(87, 25);
-        	this.characterLabel.TabIndex = 0;
-        	this.characterLabel.Text = "&Character:";
-        	this.characterLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        	// 
-        	// bookIdLabel
-        	// 
-        	this.bookIdLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
-        	this.bookIdLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-        	this.bookIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        	this.bookIdLabel.Location = new System.Drawing.Point(3, 25);
-        	this.bookIdLabel.Name = "bookIdLabel";
-        	this.bookIdLabel.Size = new System.Drawing.Size(87, 25);
-        	this.bookIdLabel.TabIndex = 1;
-        	this.bookIdLabel.Text = "Book &ID:";
-        	this.bookIdLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        	// 
-        	// bookTitleLabel
-        	// 
-        	this.bookTitleLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
-        	this.bookTitleLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-        	this.bookTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        	this.bookTitleLabel.Location = new System.Drawing.Point(3, 50);
-        	this.bookTitleLabel.Name = "bookTitleLabel";
-        	this.bookTitleLabel.Size = new System.Drawing.Size(87, 25);
-        	this.bookTitleLabel.TabIndex = 2;
-        	this.bookTitleLabel.Text = "Book &title:";
-        	this.bookTitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        	// 
-        	// filePathLabel
-        	// 
-        	this.filePathLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
-        	this.filePathLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-        	this.filePathLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        	this.filePathLabel.Location = new System.Drawing.Point(3, 75);
-        	this.filePathLabel.Name = "filePathLabel";
-        	this.filePathLabel.Size = new System.Drawing.Size(87, 25);
-        	this.filePathLabel.TabIndex = 3;
-        	this.filePathLabel.Text = "&File path:";
-        	this.filePathLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        	// 
-        	// imagePathLabel
-        	// 
-        	this.imagePathLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
-        	this.imagePathLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-        	this.imagePathLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        	this.imagePathLabel.Location = new System.Drawing.Point(3, 100);
-        	this.imagePathLabel.Name = "imagePathLabel";
-        	this.imagePathLabel.Size = new System.Drawing.Size(87, 25);
-        	this.imagePathLabel.TabIndex = 4;
-        	this.imagePathLabel.Text = "&Image path:";
-        	this.imagePathLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        	// 
-        	// htmlTableLayoutPanel
-        	// 
-        	this.htmlTableLayoutPanel.ColumnCount = 1;
-        	this.mainTableLayoutPanel.SetColumnSpan(this.htmlTableLayoutPanel, 2);
-        	this.htmlTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-        	this.htmlTableLayoutPanel.Controls.Add(this.synopsisTextBox, 0, 1);
-        	this.htmlTableLayoutPanel.Controls.Add(this.synopsisLabel, 0, 0);
-        	this.htmlTableLayoutPanel.Controls.Add(this.addButton, 0, 2);
-        	this.htmlTableLayoutPanel.Controls.Add(this.tableLayoutPanel1, 0, 3);
-        	this.htmlTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-        	this.htmlTableLayoutPanel.Location = new System.Drawing.Point(0, 125);
-        	this.htmlTableLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
-        	this.htmlTableLayoutPanel.Name = "htmlTableLayoutPanel";
-        	this.htmlTableLayoutPanel.RowCount = 4;
-        	this.htmlTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-        	this.htmlTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-        	this.htmlTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-        	this.htmlTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-        	this.htmlTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-        	this.htmlTableLayoutPanel.Size = new System.Drawing.Size(284, 165);
-        	this.htmlTableLayoutPanel.TabIndex = 5;
-        	// 
-        	// synopsisTextBox
-        	// 
-        	this.synopsisTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-        	this.synopsisTextBox.Location = new System.Drawing.Point(3, 28);
-        	this.synopsisTextBox.Multiline = true;
-        	this.synopsisTextBox.Name = "synopsisTextBox";
-        	this.synopsisTextBox.Size = new System.Drawing.Size(278, 74);
-        	this.synopsisTextBox.TabIndex = 5;
-        	// 
-        	// synopsisLabel
-        	// 
-        	this.synopsisLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-        	this.synopsisLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        	this.synopsisLabel.Location = new System.Drawing.Point(3, 0);
-        	this.synopsisLabel.Name = "synopsisLabel";
-        	this.synopsisLabel.Size = new System.Drawing.Size(278, 25);
-        	this.synopsisLabel.TabIndex = 5;
-        	this.synopsisLabel.Text = "&SYNOPSIS:";
-        	this.synopsisLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        	// 
-        	// addButton
-        	// 
-        	this.addButton.Dock = System.Windows.Forms.DockStyle.Fill;
-        	this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        	this.addButton.ForeColor = System.Drawing.Color.Red;
-        	this.addButton.Location = new System.Drawing.Point(3, 108);
-        	this.addButton.Name = "addButton";
-        	this.addButton.Size = new System.Drawing.Size(278, 29);
-        	this.addButton.TabIndex = 6;
-        	this.addButton.Text = "&Add entry";
-        	this.addButton.UseVisualStyleBackColor = true;
-        	this.addButton.Click += new System.EventHandler(this.OnAddButtonClick);
-        	// 
-        	// tableLayoutPanel1
-        	// 
-        	this.tableLayoutPanel1.ColumnCount = 2;
-        	this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-        	this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-        	this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-        	this.tableLayoutPanel1.Controls.Add(this.removeEntryComboBox, 0, 0);
-        	this.tableLayoutPanel1.Controls.Add(this.viewHtmlButton, 1, 0);
-        	this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-        	this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 140);
-        	this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-        	this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-        	this.tableLayoutPanel1.RowCount = 1;
-        	this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-        	this.tableLayoutPanel1.Size = new System.Drawing.Size(284, 25);
-        	this.tableLayoutPanel1.TabIndex = 4;
-        	// 
-        	// removeEntryComboBox
-        	// 
-        	this.removeEntryComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-        	this.removeEntryComboBox.FormattingEnabled = true;
-        	this.removeEntryComboBox.Location = new System.Drawing.Point(3, 3);
-        	this.removeEntryComboBox.Name = "removeEntryComboBox";
-        	this.removeEntryComboBox.Size = new System.Drawing.Size(192, 21);
-        	this.removeEntryComboBox.TabIndex = 7;
-        	this.removeEntryComboBox.Text = "Select entry to delete...";
-        	this.removeEntryComboBox.SelectedIndexChanged += new System.EventHandler(this.OnRemoveEntryComboBoxSelectedIndexChanged);
-        	// 
-        	// viewHtmlButton
-        	// 
-        	this.viewHtmlButton.Dock = System.Windows.Forms.DockStyle.Fill;
-        	this.viewHtmlButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        	this.viewHtmlButton.Location = new System.Drawing.Point(201, 3);
-        	this.viewHtmlButton.Name = "viewHtmlButton";
-        	this.viewHtmlButton.Size = new System.Drawing.Size(80, 19);
-        	this.viewHtmlButton.TabIndex = 8;
-        	this.viewHtmlButton.Text = "View &HTML";
-        	this.viewHtmlButton.UseVisualStyleBackColor = true;
-        	this.viewHtmlButton.Click += new System.EventHandler(this.OnViewHtmlButtonClick);
-        	// 
-        	// browseForFileButton
-        	// 
-        	this.browseForFileButton.Dock = System.Windows.Forms.DockStyle.Fill;
-        	this.browseForFileButton.Location = new System.Drawing.Point(94, 76);
-        	this.browseForFileButton.Margin = new System.Windows.Forms.Padding(1);
-        	this.browseForFileButton.Name = "browseForFileButton";
-        	this.browseForFileButton.Size = new System.Drawing.Size(189, 23);
-        	this.browseForFileButton.TabIndex = 3;
-        	this.browseForFileButton.Text = "Browse for &file";
-        	this.browseForFileButton.UseVisualStyleBackColor = true;
-        	this.browseForFileButton.Click += new System.EventHandler(this.OnBrowseForFileButtonClick);
-        	// 
-        	// browseForImageButton
-        	// 
-        	this.browseForImageButton.Dock = System.Windows.Forms.DockStyle.Fill;
-        	this.browseForImageButton.Location = new System.Drawing.Point(94, 101);
-        	this.browseForImageButton.Margin = new System.Windows.Forms.Padding(1);
-        	this.browseForImageButton.Name = "browseForImageButton";
-        	this.browseForImageButton.Size = new System.Drawing.Size(189, 23);
-        	this.browseForImageButton.TabIndex = 4;
-        	this.browseForImageButton.Text = "Browse for &image";
-        	this.browseForImageButton.UseVisualStyleBackColor = true;
-        	this.browseForImageButton.Click += new System.EventHandler(this.OnBrowseForImageButtonClick);
-        	// 
-        	// characterTextBox
-        	// 
-        	this.characterTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-        	this.characterTextBox.Location = new System.Drawing.Point(96, 3);
-        	this.characterTextBox.Name = "characterTextBox";
-        	this.characterTextBox.Size = new System.Drawing.Size(185, 20);
-        	this.characterTextBox.TabIndex = 0;
-        	// 
-        	// bookIdTextBox
-        	// 
-        	this.bookIdTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-        	this.bookIdTextBox.Location = new System.Drawing.Point(96, 28);
-        	this.bookIdTextBox.Name = "bookIdTextBox";
-        	this.bookIdTextBox.Size = new System.Drawing.Size(185, 20);
-        	this.bookIdTextBox.TabIndex = 1;
-        	// 
-        	// bookTitleTextBox
-        	// 
-        	this.bookTitleTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-        	this.bookTitleTextBox.Location = new System.Drawing.Point(96, 53);
-        	this.bookTitleTextBox.Name = "bookTitleTextBox";
-        	this.bookTitleTextBox.Size = new System.Drawing.Size(185, 20);
-        	this.bookTitleTextBox.TabIndex = 2;
-        	// 
-        	// bookOpenFileDialog
-        	// 
-        	this.bookOpenFileDialog.Filter = "EPUB Files|*.epub|MOBI Files|*.mobi|AZW Files|*.azw;*.azw3|PDF Files|*.pdf|ODF Fi" +
-        	"les|.odf|LIT Files|*.lit|Text Files|*.txt|All files*(*.*)|*.*";
-        	this.bookOpenFileDialog.Multiselect = true;
-        	this.bookOpenFileDialog.Title = "Open book file";
-        	// 
-        	// imageOpenFileDialog
-        	// 
-        	this.imageOpenFileDialog.Filter = "Image Files|*.bmp;*.gif;*.ico;*.jpg;*.jpeg;*.png;*.tif;*.tiff|Bitmap Files|*.bmp|" +
-        	"GIF Files|*.gif|ICON files|*.ico|JPEG Files|*.jpg;*.jpeg|PNG Files|*.png|TIF Fil" +
-        	"es|*.tif;*.tiff|All files*(*.*)|*.*";
-        	this.imageOpenFileDialog.Multiselect = true;
-        	this.imageOpenFileDialog.Title = "Open book image";
-        	// 
-        	// copyOnDeleteToolStripMenuItem
-        	// 
-        	this.copyOnDeleteToolStripMenuItem.Name = "copyOnDeleteToolStripMenuItem";
-        	this.copyOnDeleteToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-        	this.copyOnDeleteToolStripMenuItem.Text = "Copy on &delete";
-        	// 
-        	// MainForm
-        	// 
-        	this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-        	this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        	this.ClientSize = new System.Drawing.Size(284, 336);
-        	this.Controls.Add(this.mainTableLayoutPanel);
-        	this.Controls.Add(this.mainStatusStrip);
-        	this.Controls.Add(this.mainMenuStrip);
-        	this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-        	this.Name = "MainForm";
-        	this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-        	this.Text = "Book Synopsis Template";
-        	this.Load += new System.EventHandler(this.OnMainFormLoad);
-        	this.mainMenuStrip.ResumeLayout(false);
-        	this.mainMenuStrip.PerformLayout();
-        	this.mainStatusStrip.ResumeLayout(false);
-        	this.mainStatusStrip.PerformLayout();
-        	this.mainTableLayoutPanel.ResumeLayout(false);
-        	this.mainTableLayoutPanel.PerformLayout();
-        	this.htmlTableLayoutPanel.ResumeLayout(false);
-        	this.htmlTableLayoutPanel.PerformLayout();
-        	this.tableLayoutPanel1.ResumeLayout(false);
-        	this.ResumeLayout(false);
-        	this.PerformLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyOnAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearOnAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relativePathsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.headquartersPatreoncomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sourceCodeGithubcomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.originalThreadDonationCodercomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
+            this.mainToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.mainTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.characterLabel = new System.Windows.Forms.Label();
+            this.bookIdLabel = new System.Windows.Forms.Label();
+            this.bookTitleLabel = new System.Windows.Forms.Label();
+            this.filePathLabel = new System.Windows.Forms.Label();
+            this.imagePathLabel = new System.Windows.Forms.Label();
+            this.htmlTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.synopsisTextBox = new System.Windows.Forms.TextBox();
+            this.synopsisLabel = new System.Windows.Forms.Label();
+            this.addButton = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.removeEntryComboBox = new System.Windows.Forms.ComboBox();
+            this.viewHtmlButton = new System.Windows.Forms.Button();
+            this.browseForFileButton = new System.Windows.Forms.Button();
+            this.browseForImageButton = new System.Windows.Forms.Button();
+            this.characterTextBox = new System.Windows.Forms.TextBox();
+            this.bookIdTextBox = new System.Windows.Forms.TextBox();
+            this.bookTitleTextBox = new System.Windows.Forms.TextBox();
+            this.bookOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.imageOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.copyOnDeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mainMenuStrip.SuspendLayout();
+            this.mainStatusStrip.SuspendLayout();
+            this.mainTableLayoutPanel.SuspendLayout();
+            this.htmlTableLayoutPanel.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // mainMenuStrip
+            // 
+            this.mainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+                                    this.fileToolStripMenuItem,
+                                    this.optionsToolStripMenuItem,
+                                    this.helpToolStripMenuItem});
+            this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.mainMenuStrip.Name = "mainMenuStrip";
+            this.mainMenuStrip.Size = new System.Drawing.Size(284, 24);
+            this.mainMenuStrip.TabIndex = 5;
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+                                    this.newToolStripMenuItem,
+                                    this.toolStripSeparator,
+                                    this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "&File";
+            // 
+            // newToolStripMenuItem
+            // 
+            this.newToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripMenuItem.Image")));
+            this.newToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.newToolStripMenuItem.Text = "&New";
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.OnNewToolStripMenuItemClick);
+            // 
+            // toolStripSeparator
+            // 
+            this.toolStripSeparator.Name = "toolStripSeparator";
+            this.toolStripSeparator.Size = new System.Drawing.Size(138, 6);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.OnExitToolStripMenuItemClick);
+            // 
+            // optionsToolStripMenuItem
+            // 
+            this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+                                    this.copyOnAddToolStripMenuItem,
+                                    this.clearOnAddToolStripMenuItem,
+                                    this.relativePathsToolStripMenuItem,
+                                    this.copyOnDeleteToolStripMenuItem});
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.optionsToolStripMenuItem.Text = "&Options";
+            this.optionsToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.OnOptionsToolStripMenuItemDropDownItemClicked);
+            // 
+            // copyOnAddToolStripMenuItem
+            // 
+            this.copyOnAddToolStripMenuItem.Checked = true;
+            this.copyOnAddToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.copyOnAddToolStripMenuItem.Name = "copyOnAddToolStripMenuItem";
+            this.copyOnAddToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.copyOnAddToolStripMenuItem.Text = "&Copy on add";
+            // 
+            // clearOnAddToolStripMenuItem
+            // 
+            this.clearOnAddToolStripMenuItem.Checked = true;
+            this.clearOnAddToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.clearOnAddToolStripMenuItem.Name = "clearOnAddToolStripMenuItem";
+            this.clearOnAddToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.clearOnAddToolStripMenuItem.Text = "C&lear on add";
+            // 
+            // relativePathsToolStripMenuItem
+            // 
+            this.relativePathsToolStripMenuItem.Checked = true;
+            this.relativePathsToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.relativePathsToolStripMenuItem.Name = "relativePathsToolStripMenuItem";
+            this.relativePathsToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.relativePathsToolStripMenuItem.Text = "&Relative paths";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+                                    this.headquartersPatreoncomToolStripMenuItem,
+                                    this.sourceCodeGithubcomToolStripMenuItem,
+                                    this.toolStripSeparator1,
+                                    this.originalThreadDonationCodercomToolStripMenuItem,
+                                    this.toolStripSeparator5,
+                                    this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "&Help";
+            // 
+            // headquartersPatreoncomToolStripMenuItem
+            // 
+            this.headquartersPatreoncomToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("headquartersPatreoncomToolStripMenuItem.Image")));
+            this.headquartersPatreoncomToolStripMenuItem.Name = "headquartersPatreoncomToolStripMenuItem";
+            this.headquartersPatreoncomToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
+            this.headquartersPatreoncomToolStripMenuItem.Text = "Headquarters @ Patreon.com";
+            this.headquartersPatreoncomToolStripMenuItem.Click += new System.EventHandler(this.OnHeadquartersPatreoncomToolStripMenuItemClick);
+            // 
+            // sourceCodeGithubcomToolStripMenuItem
+            // 
+            this.sourceCodeGithubcomToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sourceCodeGithubcomToolStripMenuItem.Image")));
+            this.sourceCodeGithubcomToolStripMenuItem.Name = "sourceCodeGithubcomToolStripMenuItem";
+            this.sourceCodeGithubcomToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
+            this.sourceCodeGithubcomToolStripMenuItem.Text = "Source code @ Github.com";
+            this.sourceCodeGithubcomToolStripMenuItem.Click += new System.EventHandler(this.OnSourceCodeGithubcomToolStripMenuItemClick);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(275, 6);
+            // 
+            // originalThreadDonationCodercomToolStripMenuItem
+            // 
+            this.originalThreadDonationCodercomToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("originalThreadDonationCodercomToolStripMenuItem.Image")));
+            this.originalThreadDonationCodercomToolStripMenuItem.Name = "originalThreadDonationCodercomToolStripMenuItem";
+            this.originalThreadDonationCodercomToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
+            this.originalThreadDonationCodercomToolStripMenuItem.Text = "&Original thread @ DonationCoder.com";
+            this.originalThreadDonationCodercomToolStripMenuItem.Click += new System.EventHandler(this.OnOriginalThreadDonationCodercomToolStripMenuItemClick);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(275, 6);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
+            this.aboutToolStripMenuItem.Text = "&About...";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.OnAboutToolStripMenuItemClick);
+            // 
+            // mainStatusStrip
+            // 
+            this.mainStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+                                    this.mainToolStripStatusLabel});
+            this.mainStatusStrip.Location = new System.Drawing.Point(0, 314);
+            this.mainStatusStrip.Name = "mainStatusStrip";
+            this.mainStatusStrip.Size = new System.Drawing.Size(284, 22);
+            this.mainStatusStrip.TabIndex = 6;
+            // 
+            // mainToolStripStatusLabel
+            // 
+            this.mainToolStripStatusLabel.Name = "mainToolStripStatusLabel";
+            this.mainToolStripStatusLabel.Size = new System.Drawing.Size(190, 17);
+            this.mainToolStripStatusLabel.Text = "Populate fields then add new entry";
+            // 
+            // mainTableLayoutPanel
+            // 
+            this.mainTableLayoutPanel.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.mainTableLayoutPanel.ColumnCount = 2;
+            this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.74648F));
+            this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.25352F));
+            this.mainTableLayoutPanel.Controls.Add(this.characterLabel, 0, 0);
+            this.mainTableLayoutPanel.Controls.Add(this.bookIdLabel, 0, 1);
+            this.mainTableLayoutPanel.Controls.Add(this.bookTitleLabel, 0, 2);
+            this.mainTableLayoutPanel.Controls.Add(this.filePathLabel, 0, 3);
+            this.mainTableLayoutPanel.Controls.Add(this.imagePathLabel, 0, 4);
+            this.mainTableLayoutPanel.Controls.Add(this.htmlTableLayoutPanel, 0, 5);
+            this.mainTableLayoutPanel.Controls.Add(this.browseForFileButton, 1, 3);
+            this.mainTableLayoutPanel.Controls.Add(this.browseForImageButton, 1, 4);
+            this.mainTableLayoutPanel.Controls.Add(this.characterTextBox, 1, 0);
+            this.mainTableLayoutPanel.Controls.Add(this.bookIdTextBox, 1, 1);
+            this.mainTableLayoutPanel.Controls.Add(this.bookTitleTextBox, 1, 2);
+            this.mainTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainTableLayoutPanel.Location = new System.Drawing.Point(0, 24);
+            this.mainTableLayoutPanel.Name = "mainTableLayoutPanel";
+            this.mainTableLayoutPanel.RowCount = 6;
+            this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.mainTableLayoutPanel.Size = new System.Drawing.Size(284, 290);
+            this.mainTableLayoutPanel.TabIndex = 7;
+            // 
+            // characterLabel
+            // 
+            this.characterLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.characterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.characterLabel.Location = new System.Drawing.Point(3, 0);
+            this.characterLabel.Name = "characterLabel";
+            this.characterLabel.Size = new System.Drawing.Size(87, 25);
+            this.characterLabel.TabIndex = 0;
+            this.characterLabel.Text = "&Character:";
+            this.characterLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bookIdLabel
+            // 
+            this.bookIdLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.bookIdLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bookIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookIdLabel.Location = new System.Drawing.Point(3, 25);
+            this.bookIdLabel.Name = "bookIdLabel";
+            this.bookIdLabel.Size = new System.Drawing.Size(87, 25);
+            this.bookIdLabel.TabIndex = 1;
+            this.bookIdLabel.Text = "Book &ID:";
+            this.bookIdLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bookTitleLabel
+            // 
+            this.bookTitleLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.bookTitleLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bookTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookTitleLabel.Location = new System.Drawing.Point(3, 50);
+            this.bookTitleLabel.Name = "bookTitleLabel";
+            this.bookTitleLabel.Size = new System.Drawing.Size(87, 25);
+            this.bookTitleLabel.TabIndex = 2;
+            this.bookTitleLabel.Text = "Book &title:";
+            this.bookTitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // filePathLabel
+            // 
+            this.filePathLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.filePathLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.filePathLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filePathLabel.Location = new System.Drawing.Point(3, 75);
+            this.filePathLabel.Name = "filePathLabel";
+            this.filePathLabel.Size = new System.Drawing.Size(87, 25);
+            this.filePathLabel.TabIndex = 3;
+            this.filePathLabel.Text = "&File path:";
+            this.filePathLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // imagePathLabel
+            // 
+            this.imagePathLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.imagePathLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.imagePathLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.imagePathLabel.Location = new System.Drawing.Point(3, 100);
+            this.imagePathLabel.Name = "imagePathLabel";
+            this.imagePathLabel.Size = new System.Drawing.Size(87, 25);
+            this.imagePathLabel.TabIndex = 4;
+            this.imagePathLabel.Text = "&Image path:";
+            this.imagePathLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // htmlTableLayoutPanel
+            // 
+            this.htmlTableLayoutPanel.ColumnCount = 1;
+            this.mainTableLayoutPanel.SetColumnSpan(this.htmlTableLayoutPanel, 2);
+            this.htmlTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.htmlTableLayoutPanel.Controls.Add(this.synopsisTextBox, 0, 1);
+            this.htmlTableLayoutPanel.Controls.Add(this.synopsisLabel, 0, 0);
+            this.htmlTableLayoutPanel.Controls.Add(this.addButton, 0, 2);
+            this.htmlTableLayoutPanel.Controls.Add(this.tableLayoutPanel1, 0, 3);
+            this.htmlTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlTableLayoutPanel.Location = new System.Drawing.Point(0, 125);
+            this.htmlTableLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.htmlTableLayoutPanel.Name = "htmlTableLayoutPanel";
+            this.htmlTableLayoutPanel.RowCount = 4;
+            this.htmlTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.htmlTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.htmlTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.htmlTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.htmlTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.htmlTableLayoutPanel.Size = new System.Drawing.Size(284, 165);
+            this.htmlTableLayoutPanel.TabIndex = 5;
+            // 
+            // synopsisTextBox
+            // 
+            this.synopsisTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.synopsisTextBox.Location = new System.Drawing.Point(3, 28);
+            this.synopsisTextBox.Multiline = true;
+            this.synopsisTextBox.Name = "synopsisTextBox";
+            this.synopsisTextBox.Size = new System.Drawing.Size(278, 74);
+            this.synopsisTextBox.TabIndex = 5;
+            // 
+            // synopsisLabel
+            // 
+            this.synopsisLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.synopsisLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.synopsisLabel.Location = new System.Drawing.Point(3, 0);
+            this.synopsisLabel.Name = "synopsisLabel";
+            this.synopsisLabel.Size = new System.Drawing.Size(278, 25);
+            this.synopsisLabel.TabIndex = 5;
+            this.synopsisLabel.Text = "&SYNOPSIS:";
+            this.synopsisLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // addButton
+            // 
+            this.addButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addButton.ForeColor = System.Drawing.Color.Red;
+            this.addButton.Location = new System.Drawing.Point(3, 108);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(278, 29);
+            this.addButton.TabIndex = 6;
+            this.addButton.Text = "&Add entry";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.OnAddButtonClick);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.removeEntryComboBox, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.viewHtmlButton, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 140);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(284, 25);
+            this.tableLayoutPanel1.TabIndex = 4;
+            // 
+            // removeEntryComboBox
+            // 
+            this.removeEntryComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.removeEntryComboBox.FormattingEnabled = true;
+            this.removeEntryComboBox.Location = new System.Drawing.Point(3, 3);
+            this.removeEntryComboBox.Name = "removeEntryComboBox";
+            this.removeEntryComboBox.Size = new System.Drawing.Size(192, 21);
+            this.removeEntryComboBox.TabIndex = 7;
+            this.removeEntryComboBox.Text = "Select entry to delete...";
+            this.removeEntryComboBox.SelectedIndexChanged += new System.EventHandler(this.OnRemoveEntryComboBoxSelectedIndexChanged);
+            // 
+            // viewHtmlButton
+            // 
+            this.viewHtmlButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewHtmlButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewHtmlButton.Location = new System.Drawing.Point(201, 3);
+            this.viewHtmlButton.Name = "viewHtmlButton";
+            this.viewHtmlButton.Size = new System.Drawing.Size(80, 19);
+            this.viewHtmlButton.TabIndex = 8;
+            this.viewHtmlButton.Text = "View &HTML";
+            this.viewHtmlButton.UseVisualStyleBackColor = true;
+            this.viewHtmlButton.Click += new System.EventHandler(this.OnViewHtmlButtonClick);
+            // 
+            // browseForFileButton
+            // 
+            this.browseForFileButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.browseForFileButton.Location = new System.Drawing.Point(94, 76);
+            this.browseForFileButton.Margin = new System.Windows.Forms.Padding(1);
+            this.browseForFileButton.Name = "browseForFileButton";
+            this.browseForFileButton.Size = new System.Drawing.Size(189, 23);
+            this.browseForFileButton.TabIndex = 3;
+            this.browseForFileButton.Text = "Browse for &file";
+            this.browseForFileButton.UseVisualStyleBackColor = true;
+            this.browseForFileButton.Click += new System.EventHandler(this.OnBrowseForFileButtonClick);
+            // 
+            // browseForImageButton
+            // 
+            this.browseForImageButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.browseForImageButton.Location = new System.Drawing.Point(94, 101);
+            this.browseForImageButton.Margin = new System.Windows.Forms.Padding(1);
+            this.browseForImageButton.Name = "browseForImageButton";
+            this.browseForImageButton.Size = new System.Drawing.Size(189, 23);
+            this.browseForImageButton.TabIndex = 4;
+            this.browseForImageButton.Text = "Browse for &image";
+            this.browseForImageButton.UseVisualStyleBackColor = true;
+            this.browseForImageButton.Click += new System.EventHandler(this.OnBrowseForImageButtonClick);
+            // 
+            // characterTextBox
+            // 
+            this.characterTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.characterTextBox.Location = new System.Drawing.Point(96, 3);
+            this.characterTextBox.Name = "characterTextBox";
+            this.characterTextBox.Size = new System.Drawing.Size(185, 20);
+            this.characterTextBox.TabIndex = 0;
+            // 
+            // bookIdTextBox
+            // 
+            this.bookIdTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bookIdTextBox.Location = new System.Drawing.Point(96, 28);
+            this.bookIdTextBox.Name = "bookIdTextBox";
+            this.bookIdTextBox.Size = new System.Drawing.Size(185, 20);
+            this.bookIdTextBox.TabIndex = 1;
+            // 
+            // bookTitleTextBox
+            // 
+            this.bookTitleTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bookTitleTextBox.Location = new System.Drawing.Point(96, 53);
+            this.bookTitleTextBox.Name = "bookTitleTextBox";
+            this.bookTitleTextBox.Size = new System.Drawing.Size(185, 20);
+            this.bookTitleTextBox.TabIndex = 2;
+            // 
+            // bookOpenFileDialog
+            // 
+            this.bookOpenFileDialog.Filter = "Book files|*.epub;*.mobi;*.azw;*.azw3;*.pdf;*.doc;*.docx;*.odf;*.lit;*.txt|EPUB Files|*.epub|MOBI Files|*.mobi|AZW Files|*.azw;*.azw3|PDF Files|*.pdf|DOC Files|*.doc;*.docx|ODF Files|.odf|LIT Files|*.lit|Text Files|*.txt|All files*(*.*)|*.*";
+            this.bookOpenFileDialog.Multiselect = true;
+            this.bookOpenFileDialog.Title = "Open book file";
+            // 
+            // imageOpenFileDialog
+            // 
+            this.imageOpenFileDialog.Filter = "Image Files|*.bmp;*.gif;*.ico;*.jpg;*.jpeg;*.png;*.tif;*.tiff|Bitmap Files|*.bmp|" +
+            "GIF Files|*.gif|ICON files|*.ico|JPEG Files|*.jpg;*.jpeg|PNG Files|*.png|TIF Fil" +
+            "es|*.tif;*.tiff|All files*(*.*)|*.*";
+            this.imageOpenFileDialog.Multiselect = true;
+            this.imageOpenFileDialog.Title = "Open book image";
+            // 
+            // copyOnDeleteToolStripMenuItem
+            // 
+            this.copyOnDeleteToolStripMenuItem.Name = "copyOnDeleteToolStripMenuItem";
+            this.copyOnDeleteToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.copyOnDeleteToolStripMenuItem.Text = "Copy on &delete";
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(284, 336);
+            this.Controls.Add(this.mainTableLayoutPanel);
+            this.Controls.Add(this.mainStatusStrip);
+            this.Controls.Add(this.mainMenuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Book Synopsis Template";
+            this.Load += new System.EventHandler(this.OnMainFormLoad);
+            this.mainMenuStrip.ResumeLayout(false);
+            this.mainMenuStrip.PerformLayout();
+            this.mainStatusStrip.ResumeLayout(false);
+            this.mainStatusStrip.PerformLayout();
+            this.mainTableLayoutPanel.ResumeLayout(false);
+            this.mainTableLayoutPanel.PerformLayout();
+            this.htmlTableLayoutPanel.ResumeLayout(false);
+            this.htmlTableLayoutPanel.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
         private System.Windows.Forms.ToolStripMenuItem copyOnDeleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clearOnAddToolStripMenuItem;
