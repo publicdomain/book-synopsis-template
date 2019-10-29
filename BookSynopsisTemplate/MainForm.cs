@@ -354,7 +354,8 @@ namespace BookSynopsisTemplate
         /// <param name="e">Event arguments.</param>
         private void OnSourceCodeGithubcomToolStripMenuItemClick(object sender, EventArgs e)
         {
-            // TODO Add code.
+            // Open GitHub
+            Process.Start("https://github.com/publicdomain");
         }
 
         /// <summary>
