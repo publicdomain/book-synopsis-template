@@ -247,7 +247,31 @@ namespace BookSynopsisTemplate
         /// <param name="e">Event arguments.</param>
         private void OnRemoveEntryComboBoxSelectedIndexChanged(object sender, EventArgs e)
         {
-            // TODO Add code.
+            // Check for null to avoid "Object reference not set"
+            if (this.removeEntryComboBox.SelectedItem == null)
+            {
+                // Halt flow
+                return;
+            }
+
+            // Delete from dictionary
+            this.entryInfoDictionary.Remove(this.removeEntryComboBox.GetItemText(this.removeEntryComboBox.SelectedItem));
+
+            // Delete from combo box
+            this.removeEntryComboBox.Items.Remove(this.removeEntryComboBox.SelectedItem);
+
+            // Copy on delete
+            if (this.copyOnDeleteToolStripMenuItem.Checked)
+            {
+                // Set updated HTML into clipboard
+                Clipboard.SetText(this.GetHtml());
+            }
+
+            // Reset text
+            this.removeEntryComboBox.Text = "Select entry to delete...";
+
+            // Reflect new entry count
+            this.UpdateStatus();
         }
 
         /// <summary>

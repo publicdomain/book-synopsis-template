@@ -44,8 +44,8 @@ namespace BookSynopsisTemplate
         	this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         	this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         	this.copyOnAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+        	this.clearOnAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         	this.relativePathsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        	this.askOnDeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         	this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         	this.headquartersPatreoncomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         	this.sourceCodeGithubcomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,7 +75,7 @@ namespace BookSynopsisTemplate
         	this.bookTitleTextBox = new System.Windows.Forms.TextBox();
         	this.bookOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
         	this.imageOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
-        	this.clearOnAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+        	this.copyOnDeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         	this.mainMenuStrip.SuspendLayout();
         	this.mainStatusStrip.SuspendLayout();
         	this.mainTableLayoutPanel.SuspendLayout();
@@ -132,7 +132,7 @@ namespace BookSynopsisTemplate
         	        	        	this.copyOnAddToolStripMenuItem,
         	        	        	this.clearOnAddToolStripMenuItem,
         	        	        	this.relativePathsToolStripMenuItem,
-        	        	        	this.askOnDeleteToolStripMenuItem});
+        	        	        	this.copyOnDeleteToolStripMenuItem});
         	this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
         	this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
         	this.optionsToolStripMenuItem.Text = "&Options";
@@ -143,22 +143,24 @@ namespace BookSynopsisTemplate
         	this.copyOnAddToolStripMenuItem.Checked = true;
         	this.copyOnAddToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
         	this.copyOnAddToolStripMenuItem.Name = "copyOnAddToolStripMenuItem";
-        	this.copyOnAddToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+        	this.copyOnAddToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
         	this.copyOnAddToolStripMenuItem.Text = "&Copy on add";
+        	// 
+        	// clearOnAddToolStripMenuItem
+        	// 
+        	this.clearOnAddToolStripMenuItem.Checked = true;
+        	this.clearOnAddToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+        	this.clearOnAddToolStripMenuItem.Name = "clearOnAddToolStripMenuItem";
+        	this.clearOnAddToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+        	this.clearOnAddToolStripMenuItem.Text = "C&lear on add";
         	// 
         	// relativePathsToolStripMenuItem
         	// 
         	this.relativePathsToolStripMenuItem.Checked = true;
         	this.relativePathsToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
         	this.relativePathsToolStripMenuItem.Name = "relativePathsToolStripMenuItem";
-        	this.relativePathsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+        	this.relativePathsToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
         	this.relativePathsToolStripMenuItem.Text = "&Relative paths";
-        	// 
-        	// askOnDeleteToolStripMenuItem
-        	// 
-        	this.askOnDeleteToolStripMenuItem.Name = "askOnDeleteToolStripMenuItem";
-        	this.askOnDeleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-        	this.askOnDeleteToolStripMenuItem.Text = "&Ask on delete";
         	// 
         	// helpToolStripMenuItem
         	// 
@@ -476,13 +478,11 @@ namespace BookSynopsisTemplate
         	this.imageOpenFileDialog.Multiselect = true;
         	this.imageOpenFileDialog.Title = "Open book image";
         	// 
-        	// clearOnAddToolStripMenuItem
+        	// copyOnDeleteToolStripMenuItem
         	// 
-        	this.clearOnAddToolStripMenuItem.Checked = true;
-        	this.clearOnAddToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-        	this.clearOnAddToolStripMenuItem.Name = "clearOnAddToolStripMenuItem";
-        	this.clearOnAddToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-        	this.clearOnAddToolStripMenuItem.Text = "C&lear on add";
+        	this.copyOnDeleteToolStripMenuItem.Name = "copyOnDeleteToolStripMenuItem";
+        	this.copyOnDeleteToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+        	this.copyOnDeleteToolStripMenuItem.Text = "Copy on &delete";
         	// 
         	// MainForm
         	// 
@@ -509,10 +509,10 @@ namespace BookSynopsisTemplate
         	this.ResumeLayout(false);
         	this.PerformLayout();
         }
+        private System.Windows.Forms.ToolStripMenuItem copyOnDeleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clearOnAddToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog imageOpenFileDialog;
         private System.Windows.Forms.OpenFileDialog bookOpenFileDialog;
-        private System.Windows.Forms.ToolStripMenuItem askOnDeleteToolStripMenuItem;
         private System.Windows.Forms.Button viewHtmlButton;
         private System.Windows.Forms.ComboBox removeEntryComboBox;
         private System.Windows.Forms.ToolStripMenuItem relativePathsToolStripMenuItem;
