@@ -8,6 +8,8 @@ namespace BookSynopsisTemplate
     // Directives
     using System;
     using System.Drawing;
+    using System.IO;
+    using System.Text;
     using System.Windows.Forms;
 
     /// <summary>
@@ -35,7 +37,20 @@ namespace BookSynopsisTemplate
         /// <param name="e">Event arguments.</param>
         private void OnSaveToolStripMenuItemClick(object sender, EventArgs e)
         {
-            // TODO Add code.
+            // Open save dialog
+            if (this.saveHtmlFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Use file stream
+                using (FileStream fileStream = (FileStream)this.saveHtmlFileDialog.OpenFile())
+                {
+                    // Use stream writer
+                    using (StreamWriter streamWriter = new StreamWriter(fileStream, Encoding.UTF8))
+                    {
+                        // Write to disk
+                        streamWriter.Write(this.htmlTextBox.Text);
+                    }
+                }
+            }
         }
 
         /// <summary>
