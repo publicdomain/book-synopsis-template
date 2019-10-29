@@ -175,7 +175,7 @@ namespace BookSynopsisTemplate
         private void UpdateStatus()
         {
             // Display entry count
-            this.mainToolStripStatusLabel.Text = $"Entry count: {this.removeEntryComboBox.Items.Count}";
+            this.mainToolStripStatusLabel.Text = this.entryInfoDictionary.Count > 0 ? $"Entry count: {this.removeEntryComboBox.Items.Count}" : "Populate fields then add new entry";
         }
 
         /// <summary>
