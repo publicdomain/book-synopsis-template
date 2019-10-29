@@ -237,7 +237,11 @@ namespace BookSynopsisTemplate
         /// <param name="e">Event arguments.</param>
         private void OnViewHtmlButtonClick(object sender, EventArgs e)
         {
-            // TODO Add code.
+            // Set new view HTML form
+            var viewHtmlForm = new ViewHtmlForm(this.GetHtml());
+
+            // Show it
+            viewHtmlForm.Show();
         }
 
         /// <summary>
